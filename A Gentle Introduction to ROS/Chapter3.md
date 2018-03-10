@@ -4,7 +4,7 @@ Here are some notes  related to ROS.
 ## Chapter3
 
 ### 3.1 Creating a workspace and a package
-**Creating a workspace**  Packages that you create should live together in a directory called a workspace. You can name your workspace whatever you like, and store the directory anywhere in your account that you prefer.
+**Creating a workspace** Packages that you create should live together in a directory called a workspace. You can name your workspace whatever you like, and store the directory anywhere in your account that you prefer.
 I use $HOME/ros . Create a subdirectory called src inside the workspace directory to store the source codes.
 
 **Creating a package ** The command to create a new ROS package, which should be run from the src directory of your workspace, looks like this:
