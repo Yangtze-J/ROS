@@ -7,7 +7,7 @@ Here are some notes  related to ROS.
 **Creating a workspace** Packages that you create should live together in a directory called a workspace. You can name your workspace whatever you like, and store the directory anywhere in your account that you prefer.
 I use $HOME/ros . Create a subdirectory called src inside the workspace directory to store the source codes.
 
-**Creating a package ** The command to create a new ROS package, which should be run from the src directory of your workspace, looks like this:
+**Creating a package** The command to create a new ROS package, which should be run from the src directory of your workspace, looks like this:
 ```
 catkin\_create\_pkg package-name
 ```
@@ -50,11 +50,17 @@ How can you compile and run this program? This is handled by ROS’s build syste
 First, we need to declare the other packages on which ours depends. For C++ programs, this step is needed primarily to ensure that catkin provides the C++ compiler with the appropriate flags to locate the header files and libraries that it needs.
 
 To list dependencies, edit the CMakeLists.txt in your package directory. The default version of this file has this line:
-```find_package(catkin REQUIRED)```
+```
+find_package(catkin REQUIRED)
+```
 Dependencies on other catkin packages can be added in a COMPONENTS section on this line:
-```find_package(catkin REQUIRED COMPONENTS package-names)```
+```
+find_package(catkin REQUIRED COMPONENTS package-names)
+```
 For the hello example, we need one dependency on a package called roscpp, which provides the C++ ROS client library. The required find_package line, therefore, is:
-```find_package(catkin REQUIRED COMPONENTS roscpp)```
+```
+find_package(catkin REQUIRED COMPONENTS roscpp)
+```
 
 __________________
 We should also list dependencies in the package manifest (package.xml), using the build_depend and run_depend elements:
