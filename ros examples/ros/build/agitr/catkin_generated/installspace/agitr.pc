@@ -1,0 +1,8 @@
+prefix=/home/yang/ros/install
+
+Name: agitr
+Description: Description of agitr
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/yang/ros/install/lib 
+Requires: 
