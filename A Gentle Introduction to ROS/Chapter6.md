@@ -289,14 +289,14 @@ To help **make launch files configurable**, roslaunch supports **launch argument
 ```
 <launch>
     <include
-	file = "$(find agitr)/doulesim.launch"
+	file = "$(find agitr)/doublesim.launch"
     />
     <arg
 	name = "use_sim3"
 	default = "0"
     />
 
-    <group ns = "sim3"  if = "arg use_sim3" >
+    <group ns = "sim3"  if = "$(arg use_sim3)" >
 	<node
 	    pkg = "turtlesim"
 	    type = "turtlesim_node"
